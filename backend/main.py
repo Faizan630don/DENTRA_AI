@@ -259,6 +259,8 @@ async def test():
     if cnn_service.model is None: return {"error": "Model not loaded"}
     return {"model": "YOLO (best.pt)", "classes": cnn_service.model.names}
 
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
