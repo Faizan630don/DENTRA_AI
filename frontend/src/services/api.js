@@ -6,7 +6,9 @@
 import { validateAnalysisResult, logValidationIssues } from '../utils/dataValidator';
 
 const USE_MOCK = false; 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const BASE_URL = import.meta.env.PROD 
+  ? 'https://dentra-ai-1.onrender.com' 
+  : (import.meta.env.VITE_API_URL || 'http://localhost:8000');
 
 // Local cache for performance
 const resultCache = {};
